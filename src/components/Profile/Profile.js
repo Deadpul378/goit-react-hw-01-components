@@ -3,10 +3,13 @@ import {
   Card,
   Description,
   Avatar,
-  Stats,
+  Label,
+  Quantity,
   StatsList,
   StatsItem,
-  DescriptionText,
+  UserName,
+  UserNickName,
+  UserLocation,
 } from './Profile.styled';
 export const Profile = ({
   username,
@@ -19,23 +22,23 @@ export const Profile = ({
     <Card className="profile">
       <Description className="description">
         <Avatar src={avatar} alt="User avatar" className="avatar" />
-        <DescriptionText className="name">{username}</DescriptionText>
-        <DescriptionText className="tag">@{tag}</DescriptionText>
-        <DescriptionText className="location">{location}</DescriptionText>
+        <UserName className="name">{username}</UserName>
+        <UserNickName className="tag">@{tag}</UserNickName>
+        <UserLocation className="location">{location}</UserLocation>
       </Description>
 
       <StatsList className="stats">
         <StatsItem>
-          <Stats className="label">Followers</Stats>
-          <Stats className="quantity">{likes}</Stats>
+          <Label className="label">Followers</Label>
+          <Quantity className="quantity">{likes}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Stats className="label">Views</Stats>
-          <Stats className="quantity">{views}</Stats>
+          <Label className="label">Views</Label>
+          <Quantity className="quantity">{views}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Stats className="label">Likes</Stats>
-          <Stats className="quantity">{followers}</Stats>
+          <Label className="label">Likes</Label>
+          <Quantity className="quantity">{followers}</Quantity>
         </StatsItem>
       </StatsList>
     </Card>
